@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    background: #230f80;
+}
+
+header {
+    background: rgb(71, 30, 217);
+    background: linear-gradient(90deg, rgba(71, 30, 217, 1) 25%, rgba(54, 79, 217, 1) 50%, rgba(27, 142, 242, 1) 75%);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: underline 5px solid #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #230f80;
+}
+
+.container{
+    width: 100%;
+}
+
+.explorer {
+    padding: 10px;
+    width: 20%;
+}
+
+.cardselection {
+    background-color: #fff;
+    padding: 30px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: rgb(71, 30, 217);
+    width: 30%;
+    height: 400px;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.card p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.TagsNaoSelecionadas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+}
+
+.TagsSelecionadas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+}
+
+.TagsSelecionadas .tag .tag-command .tag-add {
+    display: none;
+}
+
+.TagsNaoSelecionadas .tag .tag-command .tag-remove {
+    display: none;
+}
+
+.tag {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+
+.tag.disable {
+    display: none;
+}
+
+.tag:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.04);
+    opacity: 0.8;
+}
+
+.tag-command {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    gap: 4px;
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.tag:hover .tag-command {
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.tag-command>div {
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tag-remove {
+    background-color: rgb(227, 44, 93);
+    font-size: 10px;
+    padding: 2px;
+    z-index: 3;
+}
+
+.tag-add {
+    background-color: rgb(61, 220, 61);
+    font-size: 15px;
+    z-index: 3;
+}
+
+footer p {
+    font-size: 18px;
+    font-weight: 500;
+}
